@@ -426,6 +426,9 @@ RUN apt-get update \
  && curl -sL https://repo1.maven.org/maven2/org/elasticsearch/elasticsearch-hadoop/6.8.1/elasticsearch-hadoop-6.8.1.jar
 RUN pip install --no-cache-dir elasticsearch==7.1.0
 
+# Install OpenCV
+RUN pip install --no-cache-dir opencv-python==4.2.0.32
+
 # Install rpy2 to share data between Python and R
 RUN conda install rpy2=2.9.4 plotly=4.4.1
 RUN conda install -c conda-forge ipyleaflet
