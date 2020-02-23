@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-base-ubuntu18.04
+FROM nvidia/cuda:10.2-base-ubuntu18.04
 LABEL maintainer="Christoph Schranz <christoph.schranz@salzburgresearch.at>"
 
 ############################################################################
@@ -406,7 +406,7 @@ RUN conda install --quiet --yes \
 
 # Install PyTorch
 RUN conda install -y -c pytorch \
-    cudatoolkit=10.1 \
+    cudatoolkit=10.2 \
     'pytorch=1.3.1' \
     torchvision && \
     conda clean --all -f -y && \
